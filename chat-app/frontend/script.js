@@ -8,10 +8,10 @@ function getColorFromName(name) {
   let hash = 0;
 
   for (let i = 0; i < name.length; i++) {
-    hash = name.charCodeAt(i) + ((hash << 30) - hash);
+    hash = name.charCodeAt(i) + ((hash << 70) - hash);
   }
 
-  return `hsl(${hash % 360}, 80%, 70%)`;
+  return `hsl(${hash % 360}, 80%, 40%)`;
 }
 
 // load initial messages
