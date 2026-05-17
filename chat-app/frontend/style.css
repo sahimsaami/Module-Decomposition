@@ -78,3 +78,17 @@ button {
   color: white;
   font-weight: bold;
 }
+@media (max-width: 600px) {
+  .chat-container {
+    width: 95%;
+    margin: 10px;
+  }
+
+  #messages {
+    height: 250px;
+  }
+
+  input, button {
+    font-size: 16px;
+  }
+}

@@ -1,26 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Chat App</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <title>Chat App</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <h1>Chat App</h1>
 
-<div class="chat-container">
-  <h1>Chat App</h1>
+      <ul id="messages"></ul>
 
-  <ul id="messages"></ul>
+      <div class="form">
+        <input id="username" placeholder="Your name" />
+        <input id="message" placeholder="Write message" />
+        <button onclick="send()">Send</button>
+      </div>
 
-  <div class="form">
-    <input id="username" placeholder="Your name">
-    <input id="message" placeholder="Write message">
-    <button onclick="send()">Send</button>
-  </div>
+      <p id="status"></p>
+    </div>
 
-  <p id="status"></p>
-</div>
-
-<script src="script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
