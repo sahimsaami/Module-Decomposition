@@ -1,5 +1,5 @@
-const API = "http://localhost:3000/api/messages";
-const WS = "ws://localhost:3000";
+const API = "http://zqmukdlt7gt071q4ssw7jzxb.178.105.39.91.sslip.io/api/messages";
+const WS = "ws://zqmukdlt7gt071q4ssw7jzxb.178.105.39.91.sslip.io";
 
 const list = document.getElementById("messages");
 
