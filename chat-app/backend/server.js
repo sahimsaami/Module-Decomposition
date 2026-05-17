@@ -74,3 +74,8 @@ function broadcast(message) {
     }
   }
 }
+// DELETE ALL MESSAGES (for testing)
+app.delete("/api/messages", (req, res) => {
+  messages = [];
+  res.json({ message: "All messages deleted ✅" });
+});

@@ -111,4 +111,15 @@ messageInput.addEventListener("keydown", (e) => {
     send();
   }
 });
+async function clearMessages() {
+  await fetch(API, {
+    method: "DELETE"
+  });
+
+  // پاک کردن UI
+  const list = document.getElementById("messages");
+  list.innerHTML = "";
+
+  show("🗑️ Chat cleared");
+}
 
