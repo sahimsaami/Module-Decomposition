@@ -1,5 +1,5 @@
-const API = "http://localhost:3000/api/messages";
-const WS = "ws://localhost:3000";
+const API = "https://your-domain/api/messages";
+const WS = "wss://your-domain";
 
 const list = document.getElementById("messages");
 
@@ -43,16 +43,15 @@ function addMessage(msg) {
 // Send massage
 async function send() {
   const text = document.getElementById("message").value;
-const author = document.getElementById("username").value;
+  const author = document.getElementById("username").value;
 
- if (!author || !author.trim()) {
-  show("❌ Please enter your name");
-  return;
-    }
+  if (!author || !author.trim()) {
+    show("❌ Please enter your name");
+    return;
+  }
   if (!text.trim()) {
     show("❌ Message empty");
     return;
-    
   }
 
   try {
@@ -78,7 +77,7 @@ const author = document.getElementById("username").value;
   }
 }
 
-// status 
+// status
 function show(msg) {
   document.getElementById("status").textContent = msg;
 }
