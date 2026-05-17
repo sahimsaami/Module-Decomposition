@@ -5,24 +5,23 @@ const crypto = require("crypto");
 
 const app = express();
 
-// MIDDLEWARE 
+// MIDDLEWARE
 app.use(cors());
 app.use(express.json());
 
-// DATA 
+// DATA
 let messages = [];
 // ROUTES
 app.get("/", (req, res) => {
   res.send("✅ Chat backend is running");
 });
 
-
 // GET ALL MESSAGES
 app.get("/api/messages", (req, res) => {
   res.json(messages);
 });
 
-// SEND MESSAGE 
+// SEND MESSAGE
 app.post("/api/messages", (req, res) => {
   const { text, author } = req.body;
 
@@ -40,7 +39,7 @@ app.post("/api/messages", (req, res) => {
     id: crypto.randomUUID(),
     text: text.trim(),
     author: author.trim(),
-    timestamp: Date.now()
+    timestamp: Date.now(),
   };
 
   messages.push(newMessage);
@@ -56,7 +55,7 @@ const server = app.listen(3000, () => {
   console.log("✅ Server running on http://localhost:3000");
 });
 
-// WEBSOCKET    
+// WEBSOCKET
 const wss = new WebSocketServer({ server });
 
 wss.on("connection", (ws) => {
