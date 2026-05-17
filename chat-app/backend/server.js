@@ -11,6 +11,11 @@ app.use(express.json());
 
 // DATA 
 let messages = [];
+// ROUTES
+app.get("/", (req, res) => {
+  res.send("✅ Chat backend is running");
+});
+
 
 // GET ALL MESSAGES
 app.get("/api/messages", (req, res) => {

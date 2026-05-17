@@ -1,5 +1,5 @@
-const API = "https://your-domain/api/messages";
-const WS = "wss://your-domain";
+const API = "http://localhost:3000/api/messages";
+const WS = "ws://localhost:3000";
 
 const list = document.getElementById("messages");
 
