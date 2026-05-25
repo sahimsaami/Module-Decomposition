@@ -1,4 +1,4 @@
-const BASE = "http://a13384i9tazulc92qxt50ssf.178.105.39.91.sslip.io";
+const BASE = "http://zqmukdlt7gt071q4ssw7jzxb.178.105.39.91.sslip.io";
 const API = BASE + "/api/messages";
 const WS = BASE.replace("http", "ws") + "/ws";
 
