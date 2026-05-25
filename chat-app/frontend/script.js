@@ -1,5 +1,6 @@
-const API = "http://localhost:3000/api/messages";
-const WS = "ws://localhost:3000/ws";
+const BASE = "http://a13384i9tazulc92qxt50ssf.178.105.39.91.sslip.io";
+const API = BASE + "/api/messages";
+const WS = BASE.replace("http", "ws") + "/ws";
 
 const list = document.getElementById("messages");
 const usernameInput = document.getElementById("username");
